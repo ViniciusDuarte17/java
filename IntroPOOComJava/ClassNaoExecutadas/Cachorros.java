@@ -7,4 +7,30 @@ public class Cachorros {
     public int altura;
     public double peso;
     public int tamanhoDoRabo;
+    public String estadoEspirito;
+
+    public void comer() {};
+
+    public void latir(){
+        System.out.println("AU AU");
+    };
+
+    public String pegar() {
+        return "Bolinha";
+    };
+
+    public String interagir(String acao) {
+
+        if(acao.equals("carinho")){
+            this.estadoEspirito = "Feliz";
+        } else if(acao.equals("vai dormir")){
+            this.estadoEspirito = "Bravo";
+        } else if(acao.equals("alimentei")) {
+            this.estadoEspirito = "Labendo seu dono";
+        } else {
+            this.estadoEspirito = "neutro";
+        }
+
+        return estadoEspirito;
+    }
 }
