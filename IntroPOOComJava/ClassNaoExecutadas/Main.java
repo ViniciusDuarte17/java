@@ -3,16 +3,12 @@ package IntroPOOComJava.ClassNaoExecutadas;
 public class Main {
     public static void main (String [] args) {
         
-        Cachorros cachorros1 = new Cachorros(); 
-        
-        cachorros1.nome = "Morgana";
-        cachorros1.cor = "Marron";
-        cachorros1.altura = 60;
-        cachorros1.peso = 20.5;
-        cachorros1.tamanhoDoRabo = 5;
-
+        Cachorros cachorros1 = new Cachorros("Morgana", "Marron", 60, 22.5, 5 ); 
+    
         cachorros1.latir();
         System.out.println("o cachorro pegou a " + cachorros1.pegar());
+
+        System.out.println(cachorros1.getNome());
 
         System.out.println("O cachorro está " + cachorros1.interagir("vai dormir"));
         System.out.println("O cachorro está " + cachorros1.interagir("carinho"));
