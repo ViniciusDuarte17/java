@@ -2,6 +2,7 @@ package IntroPOOComJava.ClassNaoExecutadas;
 
 public class Cachorros {
     
+    static int numerosDeCachorro;
     private String nome;
     private String cor;
     private int altura;
@@ -19,6 +20,8 @@ public class Cachorros {
         this.altura = altura;
         this.peso = peso;
         this.tamanhoDoRabo = tamanhoDoRabo;
+
+        numerosDeCachorro ++;
     };
 
     //metados
@@ -84,4 +87,10 @@ public class Cachorros {
 
         return estadoEspirito;
     }
+
+    @Override
+    public String toString() {
+        return "Cachorros {nome=" + nome + "}";
+    }
+
 }
