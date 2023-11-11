@@ -1,6 +1,6 @@
 package IntroPOOComJava.ClassNaoExecutadas;
 
-public class Animal {
+public abstract class Animal {
    
     protected String nome;
     protected String cor;
@@ -49,15 +49,16 @@ public class Animal {
         this.peso = peso;
     }
 
+    public void setEstadoEspirito(String estadoEspirito) {
+        this.estadoEspirito = estadoEspirito;
+    }
 
 
     protected void comer (){}
 
     protected void dormir(){}
 
-    protected void soar(){
-        System.out.println(" cri cri ");
-    }
+    protected abstract void soar();
 
 
     @Override
