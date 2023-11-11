@@ -1,20 +1,13 @@
 package IntroPOOComJava.ClassNaoExecutadas;
 
-public class Cachorros {
+public class Cachorros extends Animal {
     
     static int numerosDeCachorro;
-    private String nome;
-    private String cor;
-    private int altura;
-    private double peso;
     private int tamanhoDoRabo;
-    private String estadoEspirito;
-
-    // construtores
-    Cachorros() {};
 
     //Na linha 16 estou dizendo o que meu construtor vai ter
-    Cachorros(String nome, String cor, int altura, double peso, int tamanhoDoRabo){
+    Cachorros(String nome, String cor, int altura, double peso, int i){
+        super(nome, cor, altura, peso);
         this.nome = nome;
         this.cor = cor;
         this.altura = altura;
@@ -26,55 +19,25 @@ public class Cachorros {
 
     //metados
 
-    public String getNome() {
-        return this.nome;
-    }
-
-    public String getCor() {
-        return this.cor;
-    }
-
-    public int getAltura() {
-        return altura;
-    }
-
-    public double getPeso() {
-        return this.peso;
-    }
-
     public int getTamanhoDoRabo() {
-        return this.tamanhoDoRabo;
+        return tamanhoDoRabo;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public int setTamanhoDoRabo(int tamanhoDoRabo ) {
+        return this.tamanhoDoRabo = tamanhoDoRabo;
     }
 
-    public void setCor(String cor) {
-        this.cor = cor;
-    }
-
-    public void setAltura(int altura) {
-        this.altura = altura;
-    }
-
-    public void setPeso(double peso) {
-        this.peso = peso;
-    }
-
-    public void setTamanhoDoRabo(int tamanhoDoRabo) {
-        this.tamanhoDoRabo = tamanhoDoRabo;
-    }
-
-    public void comer() {};
-
-    public void latir(){
-        System.out.println("AU AU");
-    };
 
     public String pegar() {
         return "Bolinha";
     };
+
+
+    @Override
+    protected void soar() {
+        // TODO Auto-generated method stub
+        System.out.println("Au Au");
+    }
 
     public String interagir(String acao) {
 
@@ -88,9 +51,6 @@ public class Cachorros {
         return estadoEspirito;
     }
 
-    @Override
-    public String toString() {
-        return "Cachorros {nome=" + nome + "}";
-    }
+ 
 
 }
